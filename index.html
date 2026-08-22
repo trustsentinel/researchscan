@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meridian — Blockchain Network Measurement Research</title>
+<meta name="description" content="Academic, non-commercial research measuring the security and infrastructure concentration of public blockchain P2P networks. How to opt out.">
+<style>
+  :root{--bg:#ffffff;--sub:#f7f8fa;--border:#e6e8eb;--fg:#1a1d21;--muted:#5b6570;--accent:#2563eb;--green:#16a34a;--red:#dc2626}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--fg);background:var(--bg);line-height:1.65}
+  .wrap{max-width:720px;margin:0 auto;padding:0 22px}
+  header{background:linear-gradient(160deg,#eef4ff,#ffffff);border-bottom:1px solid var(--border)}
+  header .wrap{padding:54px 22px 40px}
+  .badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.4px;text-transform:uppercase;color:var(--accent);background:#e6efff;padding:4px 11px;border-radius:20px}
+  h1{font-size:30px;margin:16px 0 8px;line-height:1.2}
+  .lede{font-size:17px;color:var(--muted);max-width:600px}
+  section{padding:30px 0;border-bottom:1px solid var(--border)}
+  h2{font-size:16px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin:0 0 14px}
+  p{margin:0 0 12px}
+  ul{margin:0;padding-left:20px}
+  li{margin:6px 0}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .card{border:1px solid var(--border);border-radius:12px;padding:16px 18px;background:var(--sub)}
+  .card h3{margin:0 0 8px;font-size:14px}
+  .card.yes h3{color:var(--green)} .card.no h3{color:var(--red)}
+  .card ul{padding-left:18px;font-size:14px;color:var(--fg)}
+  .optout{background:#f0f7ff;border:1px solid #cfe0ff;border-radius:14px;padding:22px 24px}
+  .optout a{color:var(--accent);font-weight:600}
+  .contact{font-size:15px}
+  .contact b{display:inline-block;width:110px;color:var(--muted);font-weight:500}
+  footer{padding:26px 0 44px;color:var(--muted);font-size:13px}
+  code{background:var(--sub);border:1px solid var(--border);padding:1px 6px;border-radius:5px;font-family:ui-monospace,Menlo,monospace;font-size:13px}
+  @media (max-width:560px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="badge">Academic research · non-commercial</span>
+    <h1>Meridian — blockchain network measurement</h1>
+    <p class="lede">If you reached this page from a connection or scan in your logs: it's a university
+    research crawler measuring the public health of blockchain peer-to-peer networks. Here's what it
+    does, and how to opt out.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <section>
+    <h2>What Meridian is</h2>
+    <p>Meridian is a <b>non-commercial PhD research project</b> studying the security and infrastructure
+    concentration of public blockchain P2P networks (Bitcoin, later Ethereum). It measures, over time,
+    how node infrastructure is distributed across networks and providers, and what fraction of nodes run
+    software versions with publicly known vulnerabilities (CVEs).</p>
+    <p>It contacts only <b>publicly reachable nodes</b> that participate in these open networks.</p>
+  </section>
+
+  <section>
+    <h2>What it does — and doesn't</h2>
+    <div class="grid">
+      <div class="card yes">
+        <h3>✓ It does</h3>
+        <ul>
+          <li>Make low-rate connections to public nodes</li>
+          <li>Complete the standard P2P handshake</li>
+          <li>Read publicly advertised metadata (software version, block height)</li>
+          <li>Perform light checks on a small, fixed set of ports</li>
+        </ul>
+      </div>
+      <div class="card no">
+        <h3>✗ It never</h3>
+        <ul>
+          <li>Attempts to log in, authenticate, or access private systems</li>
+          <li>Exploits vulnerabilities or disrupts any service</li>
+          <li>Collects personal data beyond public node network metadata</li>
+          <li>Sells or shares data commercially</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Opt out</h2>
+    <div class="optout">
+      <p style="margin-top:0">To exclude your host, IP, or network from all active scanning, email us the
+      <b>IP address or CIDR range</b>. Requests are honoured <b>promptly</b> — the range is added to a
+      permanent scanning denylist.</p>
+      <p style="margin-bottom:0">Opt out: <a href="mailto:abuse@munimen.io?subject=Meridian%20scan%20opt-out">abuse@munimen.io</a></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p class="contact"><b>Abuse / opt-out</b> <a href="mailto:abuse@munimen.io">abuse@munimen.io</a></p>
+    <p class="contact"><b>Researcher</b> PhD candidate, network security &amp; internet measurement</p>
+    <p class="contact"><b>Ethics</b> Conducted under institutional research-ethics review, following
+      established internet-measurement best practice (minimal footprint, transparency, opt-out).</p>
+  </section>
+
+  <footer>
+    Meridian is an academic measurement study. It follows the norms of responsible internet measurement:
+    a fixed, minimal port set, conservative rate limits, a published purpose, and immediate opt-out.
+  </footer>
+</div>
+</body>
+</html>
