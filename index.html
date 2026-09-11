@@ -4,7 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Meridian — Blockchain Network Measurement Research</title>
-<meta name="description" content="Academic, non-commercial research measuring the security and infrastructure concentration of public blockchain P2P networks. How to opt out.">
+<meta name="description" content="Academic, non-commercial research measuring the security and infrastructure concentration of public blockchain P2P networks. What it does, what it never does, and how to opt out.">
+<link rel="icon" href="assets/meridian-icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/meridian-icon-256.png">
 <style>
   :root{--bg:#ffffff;--sub:#f7f8fa;--border:#e6e8eb;--fg:#1a1d21;--muted:#5b6570;--accent:#2563eb;--green:#16a34a;--red:#dc2626}
   *{box-sizing:border-box}
@@ -27,6 +29,7 @@
   .card ul{padding-left:18px;font-size:14px;color:var(--fg)}
   .optout{background:#f0f7ff;border:1px solid #cfe0ff;border-radius:14px;padding:22px 24px}
   .optout a{color:var(--accent);font-weight:600}
+  .mail{display:inline-block;margin-top:6px;font-size:19px;font-weight:600}
   .contact{font-size:15px}
   .contact b{display:inline-block;width:110px;color:var(--muted);font-weight:500}
   footer{padding:26px 0 44px;color:var(--muted);font-size:13px}
@@ -35,45 +38,52 @@
 </style>
 </head>
 <body>
+
 <header>
   <div class="wrap">
     <span class="badge">Academic research · non-commercial</span>
     <h1>Meridian — blockchain network measurement</h1>
-    <p class="lede">If you reached this page from a connection or scan in your logs: it's a university
-    research crawler measuring the public health of blockchain peer-to-peer networks. Here's what it
-    does, and how to opt out.</p>
+    <p class="lede">You found this page because Meridian connected to your node. It is a
+      non-commercial PhD research project measuring how centralised public blockchain
+      peer-to-peer networks really are.</p>
   </div>
 </header>
 
 <div class="wrap">
+
   <section>
-    <h2>What Meridian is</h2>
-    <p>Meridian is a <b>non-commercial PhD research project</b> studying the security and infrastructure
-    concentration of public blockchain P2P networks (Bitcoin, later Ethereum). It measures, over time,
-    how node infrastructure is distributed across networks and providers, and what fraction of nodes run
-    software versions with publicly known vulnerabilities (CVEs).</p>
-    <p>It contacts only <b>publicly reachable nodes</b> that participate in these open networks.</p>
+    <h2>What it is</h2>
+    <p>A doctoral study in network security and internet measurement. It maps the infrastructure
+      that public blockchain networks actually run on — hosting providers, network operators,
+      software versions, geography — to measure how concentrated, and therefore how fragile,
+      those networks are.</p>
+    <p>Ten networks, four vantage points, every day. Findings are published as aggregates and
+      statistics. Your node is one data point among hundreds of thousands; it is never the
+      subject of the research.</p>
   </section>
 
   <section>
-    <h2>What it does — and doesn't</h2>
+    <h2>What it does — and never does</h2>
     <div class="grid">
       <div class="card yes">
         <h3>✓ It does</h3>
         <ul>
-          <li>Make low-rate connections to public nodes</li>
-          <li>Complete the standard P2P handshake</li>
-          <li>Read publicly advertised metadata (software version, block height)</li>
-          <li>Perform light checks on a small, fixed set of ports</li>
+          <li>Make a standard peer-to-peer connection and handshake, and read what your node
+            already advertises — software version, capabilities, block height</li>
+          <li>Ask for peer addresses, the way the protocol itself provides for</li>
+          <li>Check whether a short, fixed list of well-known ports is open, and read what an
+            already-open service announces to anyone who connects</li>
+          <li>Contact a node at most about once a week per check, with five-second timeouts</li>
         </ul>
       </div>
       <div class="card no">
         <h3>✗ It never</h3>
         <ul>
-          <li>Attempts to log in, authenticate, or access private systems</li>
-          <li>Exploits vulnerabilities or disrupts any service</li>
-          <li>Collects personal data beyond public node network metadata</li>
-          <li>Sells or shares data commercially</li>
+          <li>Logs in, authenticates, or accesses anything non-public</li>
+          <li>Sends transactions or blocks, or anything meant to change your node's state</li>
+          <li>Exploits, fuzzes, or tests vulnerabilities against your node</li>
+          <li>Touches a port that was not already open, or runs those checks against a
+            <code>.onion</code> hidden service</li>
         </ul>
       </div>
     </div>
@@ -82,25 +92,29 @@
   <section>
     <h2>Opt out</h2>
     <div class="optout">
-      <p style="margin-top:0">To exclude your host, IP, or network from all active scanning, email us the
-      <b>IP address or CIDR range</b>. Requests are honoured <b>promptly</b> — the range is added to a
-      permanent scanning denylist.</p>
-      <p style="margin-bottom:0">Opt out: <a href="mailto:abuse@zgos.eu?subject=Meridian%20scan%20opt-out">abuse@zgos.eu</a></p>
+      <p>To exclude your host or network, email the address or CIDR range to:</p>
+      <a class="mail" href="mailto:abuse@zgos.eu?subject=Meridian%20opt-out">abuse@zgos.eu</a>
+      <p style="margin-top:12px">Requests are honoured promptly — a condition of the study's ethics
+        approval. The address is removed from both active measurement and every published figure.</p>
     </div>
   </section>
 
   <section>
     <h2>Contact</h2>
-    <p class="contact"><b>Abuse / opt-out</b> <a href="mailto:abuse@zgos.eu">abuse@zgos.eu</a></p>
-    <p class="contact"><b>Researcher</b> PhD candidate, network security &amp; internet measurement</p>
-    <p class="contact"><b>Ethics</b> Conducted under institutional research-ethics review, following
-      established internet-measurement best practice (minimal footprint, transparency, opt-out).</p>
+    <div class="contact">
+      <p><b>Project</b>Meridian — measuring P2P network decentralization</p>
+      <p><b>Conducted as</b>Doctoral research — network security &amp; internet measurement</p>
+      <p><b>Abuse / opt-out</b><a href="mailto:abuse@zgos.eu">abuse@zgos.eu</a></p>
+      <p><b>Ethics</b>Reviewed and approved by an institutional review board before measurement
+        began. Opt-out, rate limits and this disclosure page are conditions of that approval.</p>
+    </div>
   </section>
-
-  <footer>
-    Meridian is an academic measurement study. It follows the norms of responsible internet measurement:
-    a fixed, minimal port set, conservative rate limits, a published purpose, and immediate opt-out.
-  </footer>
 </div>
+
+<footer class="wrap">
+  If your monitoring flagged a connection from this project, the entry above describes exactly what
+  it was. You are welcome to write with questions — a real person answers.
+</footer>
+
 </body>
 </html>
